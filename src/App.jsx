@@ -1,13 +1,13 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header/Header';
 
 function App() {
 
 
   return (
     <div className="App">
-      <h1>Knowledge Blog</h1>
-      <button type="button" className='btn btn-danger'>Base class</button>
+      <Header></Header>
     </div>
   )
 }
