@@ -20,26 +20,25 @@ const Bookmarks = ({ readTime, bookmarks, clearSpentTime, clearBookmarks }) => {
         setBookmarkedBlogs([])
     }
   }, [bookmarks]);
+  let count=1;
 
   return (
-    <div className="card col-md-4 ">
-      <div className="pb-4 text-center">
+    <div className="card col-md-4 text-center">
+      <div className="pb-4 ">
         <h4 className="card-header pb-4">
           Spent time on read: {time ? time : 0} min
         </h4>
-      <button onClick={clearSpentTime} className="btn btn-danger btn-sm">Clear Spent Time</button>
 
       </div>
+      <button onClick={clearSpentTime} className="btn btn-danger btn-sm w-50 mx-auto mb-4">Clear Spent Time</button>
       <h4 className="card-header">Bookmarked Blogs: {bookmarkedBlogs.length}</h4>
 
       <ul className="list-group list-group-flush pb-4">
         {bookmarkedBlogs.map((bookmark) => (
-          <li className="list-group-item" key={bookmark.id}>
-            {bookmark.title}
-          </li>
+          <li className="list-group-item fw-bolder" key={bookmark.id}>{count++}. {bookmark.title}</li>
         ))}
       </ul>
-      <button onClick={clearBookmarks} className="btn btn-danger btn-sm">Clear Bookmarks</button>
+      <button onClick={clearBookmarks} className="btn btn-primary btn-sm w-50 mx-auto mt-4">Clear Bookmarks</button>
 
     </div>
   );
