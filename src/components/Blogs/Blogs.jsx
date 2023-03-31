@@ -8,7 +8,7 @@ const Blogs = () => {
     fetch("blogs.json")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
-  }, []);
+  }, [blogs]);
   return (
     <div>
       <div className="movie-container row ">

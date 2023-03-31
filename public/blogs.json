@@ -2,10 +2,10 @@
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
         "title": "React Roadmap for beginners",
-        "authorName": "ULTRABOOST 22 SHOES",
-        "publishedDate": "Addidas",
-        "minuteRed": 20,
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Ultraboost_22_Shoes_Black_GZ0127_01_standard.jpg"
+        "authorName": "Jon Jackson",
+        "publishedDate": "March 5",
+        "minuteRead": 20,
+        "img": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         
     },
     {
@@ -14,7 +14,7 @@
         "authorName": "ULTRABOOST 22 SHOES",
         "publishedDate": "Addidas",
         "minuteRed": 20,        
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2cee64414e1f4f31baf1ae270099d950_9366/Lunar_New_Year_Ultraboost_DNA_Shoes_Black_GZ6074_01_standard.jpg"
+        "img": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     },
     {
         "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
@@ -22,7 +22,7 @@
         "authorName": "ULTRABOOST 22 SHOES",
         "publishedDate": "Addidas",
         "minuteRed": 20,
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/69cbc73d0cb846889f89acbb011e68cb_9366/Supernova_Shoes_Black_S42722_01_standard.jpg"
+        "img": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
     },
     {
         "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
@@ -30,6 +30,6 @@
         "authorName": "ULTRABOOST 22 SHOES",
         "publishedDate": "Addidas",
         "minuteRed": 20,
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/96a5f085fedf4e678095abad01056711_9366/Lite_Racer_Adapt_3.0_Shoes_Black_FX8802_01_standard.jpg"
+        "img": "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2dyYW1taW5nJTIwcG5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     }
 ]

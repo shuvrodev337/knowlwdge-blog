@@ -7,16 +7,16 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App container ">
       <div>
       <Header></Header>
       </div>
-      <div className="main row">
+      <div className="row">
         <div className="blogs-container col-md-8">
           <Blogs></Blogs>
         </div>
         <div className="bookmark-section col-md-4 card">
-          
+          <h2>Bookmarked blogs</h2>
         </div>
       </div>
     </div>

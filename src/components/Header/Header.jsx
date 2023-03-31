@@ -2,7 +2,7 @@ import React from "react";
 import image from '../../images/user-1.png'
 const Header = () => {
   return (
-    <div className="container ">
+    <div >
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand fw-bold fs-2">Knowledge Blog Everyday</a>
