@@ -1,8 +1,16 @@
 import React from "react";
 import image from "../../images/user-1.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const SingleBlog = (props) => {
-  const { id, title, authorName, publishedDate, minuteRead, img } = props.blog;
+  const { id, title, authorName, publishedDate, minuteRead, img} = props.blog;
+  const handleReadTime = props.handleReadTime
+  const handleBookmarks = props.handleBookmarks
+  // const handleReadTime = () =>{
+  //   console.log('minute read',minuteRead);
+  //   console.log('title' , title);
+  // }
   return (
     <div className="card mb-3">
       <img src={img} className="card-img-top w-100"  style={{width:"800px", height:"450px"}} />
@@ -21,12 +29,12 @@ const SingleBlog = (props) => {
           </div>
           <div className="d-flex align-items-baseline gap-3">
             <p>{minuteRead} minute read</p>
-            <button>BookMark</button>
+            <button onClick={()=>handleBookmarks(title)}><FontAwesomeIcon icon={faBookmark} /></button>
           </div>
         </div>
         <h5>{title}</h5>
         <p className="card-text">#beginners #programming</p>
-        <a href="">Mark as read</a>
+        <button onClick={()=>handleReadTime(title , minuteRead)}>Mark as read </button>
       </div>
     </div>
   );
