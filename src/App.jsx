@@ -4,6 +4,8 @@ import Header from "./components/Header/Header";
 import Blogs from "./components/Blogs/Blogs";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [readTime, setReadTime] = useState(0);
@@ -21,6 +23,11 @@ function App() {
     }
   };
 
+  const clearSpentTime = ()=>{
+    localStorage.removeItem("read-time")
+    setReadTime(0)
+  }
+
   const handleBookmarks = (id, title) => {
     let bookmark = {};
     let newBookmarks = [];
@@ -36,19 +43,22 @@ function App() {
     } else {
       for (const exisTingBookmark of existingBookmarks) {
         if (exisTingBookmark.id === id) {
-          alert("alrady exists");
+          toast("Bookmark already exists!")
           return;
         }
       }
       bookmark.id = id;
       bookmark.title = title;
-      newBookmarks = [...bookmarks, bookmark];
+      newBookmarks = [...existingBookmarks, bookmark];
       localStorage.setItem("bookmarked-blogs", JSON.stringify(newBookmarks));
     }
 
     setBookmarks(newBookmarks);
   };
-
+  const clearBookmarks = ()=>{
+    localStorage.removeItem("bookmarked-blogs")
+    setBookmarks([])
+  }
   return (
     <div className="App container ">
       <div>
@@ -62,9 +72,10 @@ function App() {
           ></Blogs>
         </div>
         {/* <div className="bookmark-section col-md-4 card"> */}
-        <Bookmarks readTime={readTime} bookmarks={bookmarks}></Bookmarks>
+        <Bookmarks readTime={readTime} bookmarks={bookmarks} clearSpentTime={clearSpentTime} clearBookmarks={clearBookmarks}></Bookmarks>
         {/* </div> */}
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
