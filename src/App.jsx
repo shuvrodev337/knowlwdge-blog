@@ -6,11 +6,10 @@ import Bookmarks from "./components/Bookmarks/Bookmarks";
 import { useState } from "react";
 
 function App() {
+  const [readTime, setReadTime] = useState(0);
+  const [bookmarks, setBookmarks] = useState([]);
 
-  const [readTime , setReadTime]=useState(0)
-  const [bookmarks, setBookmarks]= useState([])
-
-  const handleReadTime = (minuteRead) =>{
+  const handleReadTime = (minuteRead) => {
     const previousReadTime = JSON.parse(localStorage.getItem("read-time"));
     if (previousReadTime) {
       const sum = previousReadTime + minuteRead;
@@ -20,16 +19,35 @@ function App() {
       localStorage.setItem("read-time", minuteRead);
       setReadTime(minuteRead);
     }
-  }
+  };
 
+  const handleBookmarks = (id, title) => {
+    let bookmark = {};
+    let newBookmarks = [];
 
-  const handleBookmarks = (title) =>{
-    const newBookmarks= [...bookmarks]
-    //localstorage a set kora lagbe
-    console.log('title', title);
-    newBookmarks.push(title)
-    setBookmarks(newBookmarks)
-  }
+    const existingBookmarks = JSON.parse(
+      localStorage.getItem("bookmarked-blogs")
+    );
+    if (!existingBookmarks) {
+      bookmark.id = id;
+      bookmark.title = title;
+      newBookmarks.push(bookmark);
+      localStorage.setItem("bookmarked-blogs", JSON.stringify(newBookmarks));
+    } else {
+      for (const exisTingBookmark of existingBookmarks) {
+        if (exisTingBookmark.id === id) {
+          alert("alrady exists");
+          return;
+        }
+      }
+      bookmark.id = id;
+      bookmark.title = title;
+      newBookmarks = [...bookmarks, bookmark];
+      localStorage.setItem("bookmarked-blogs", JSON.stringify(newBookmarks));
+    }
+
+    setBookmarks(newBookmarks);
+  };
 
   return (
     <div className="App container ">
@@ -38,10 +56,13 @@ function App() {
       </div>
       <div className="row">
         <div className="blogs-container col-md-8">
-          <Blogs handleReadTime={handleReadTime}  handleBookmarks={handleBookmarks}></Blogs>
+          <Blogs
+            handleReadTime={handleReadTime}
+            handleBookmarks={handleBookmarks}
+          ></Blogs>
         </div>
         {/* <div className="bookmark-section col-md-4 card"> */}
-          <Bookmarks readTime={readTime} bookmarks={bookmarks}></Bookmarks>
+        <Bookmarks readTime={readTime} bookmarks={bookmarks}></Bookmarks>
         {/* </div> */}
       </div>
     </div>

@@ -29,7 +29,7 @@ const SingleBlog = (props) => {
           </div>
           <div className="d-flex align-items-baseline gap-3">
             <p>{minuteRead} minute read</p>
-            <button onClick={()=>handleBookmarks(title)}><FontAwesomeIcon icon={faBookmark} /></button>
+            <button onClick={()=>handleBookmarks(id,title)}><FontAwesomeIcon icon={faBookmark} /></button>
           </div>
         </div>
         <h5>{title}</h5>
