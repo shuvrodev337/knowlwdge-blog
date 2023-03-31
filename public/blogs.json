@@ -13,7 +13,7 @@
         "title": "Jack Johnson",
         "authorName": "ULTRABOOST 22 SHOES",
         "publishedDate": "Addidas",
-        "minuteRed": 10,        
+        "minuteRead": 10,        
         "img": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     },
     {
@@ -21,7 +21,7 @@
         "title": "John Jones",
         "authorName": "ULTRABOOST 22 SHOES",
         "publishedDate": "Addidas",
-        "minuteRed": 8,
+        "minuteRead": 8,
         "img": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
     },
     {
@@ -29,7 +29,7 @@
         "title": "Daniel Klein",
         "authorName": "ULTRABOOST 22 SHOES",
         "publishedDate": "Addidas",
-        "minuteRed": 15,
+        "minuteRead": 15,
         "img": "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2dyYW1taW5nJTIwcG5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     }
 ]

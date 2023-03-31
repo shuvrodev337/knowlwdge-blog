@@ -9,7 +9,8 @@ function App() {
 
   const [readTime , setReadTime]=useState(0)
   const [bookmarks, setBookmarks]= useState([])
-  const handleReadTime = (title,minuteRead) =>{
+
+  const handleReadTime = (minuteRead) =>{
     const previousReadTime = JSON.parse(localStorage.getItem("read-time"));
     if (previousReadTime) {
       const sum = previousReadTime + minuteRead;
@@ -20,8 +21,11 @@ function App() {
       setReadTime(minuteRead);
     }
   }
+
+
   const handleBookmarks = (title) =>{
     const newBookmarks= [...bookmarks]
+    //localstorage a set kora lagbe
     console.log('title', title);
     newBookmarks.push(title)
     setBookmarks(newBookmarks)

@@ -34,7 +34,7 @@ const SingleBlog = (props) => {
         </div>
         <h5>{title}</h5>
         <p className="card-text">#beginners #programming</p>
-        <button onClick={()=>handleReadTime(title , minuteRead)}>Mark as read </button>
+        <button onClick={()=>handleReadTime(minuteRead)}>Mark as read </button>
       </div>
     </div>
   );
