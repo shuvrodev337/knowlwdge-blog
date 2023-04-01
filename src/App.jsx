@@ -21,11 +21,17 @@ function App() {
       localStorage.setItem("read-time", minuteRead);
       setReadTime(minuteRead);
     }
+    toast.success("Marked as read !", {
+      position: toast.POSITION.TOP_CENTER
+    });
   };
 
   const clearSpentTime = ()=>{
     localStorage.removeItem("read-time")
     setReadTime(0)
+    toast.success("Spent time cleared Successfully !", {
+      position: toast.POSITION.TOP_CENTER
+    });
   }
 
   const handleBookmarks = (id, title) => {
@@ -40,17 +46,26 @@ function App() {
       bookmark.title = title;
       newBookmarks.push(bookmark);
       localStorage.setItem("bookmarked-blogs", JSON.stringify(newBookmarks));
+      toast.success("Bookmark Added Successfully !", {
+        position: toast.POSITION.TOP_CENTER
+      });
     } else {
-      for (const exisTingBookmark of existingBookmarks) {
-        if (exisTingBookmark.id === id) {
-          toast("Bookmark already exists!")
+      for (const existingBookmark of existingBookmarks) {
+        if (existingBookmark.id === id) {
+          toast.error("You Have Already Bookmarked This Blog !", {
+            position: toast.POSITION.TOP_CENTER
+          });
           return;
         }
-      }
+      } 
+      
       bookmark.id = id;
       bookmark.title = title;
       newBookmarks = [...existingBookmarks, bookmark];
       localStorage.setItem("bookmarked-blogs", JSON.stringify(newBookmarks));
+      toast.success("Bookmark Added Successfully !", {
+        position: toast.POSITION.TOP_CENTER
+      });
     }
 
     setBookmarks(newBookmarks);
@@ -58,6 +73,9 @@ function App() {
   const clearBookmarks = ()=>{
     localStorage.removeItem("bookmarked-blogs")
     setBookmarks([])
+    toast.success("Bookmarks cleared Successfully !", {
+      position: toast.POSITION.TOP_CENTER
+    });
   }
   return (
     <div className="App container ">

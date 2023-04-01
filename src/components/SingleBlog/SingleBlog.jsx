@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const SingleBlog = (props) => {
-  const { id, title, authorName, publishedDate, minuteRead, img} = props.blog;
+  const { id, title, authorName, publishedDate, minuteRead, img, author_img} = props.blog;
   const handleReadTime = props.handleReadTime
   const handleBookmarks = props.handleBookmarks
   // const handleReadTime = () =>{
@@ -17,7 +17,7 @@ const SingleBlog = (props) => {
       <div className="card-body">
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center gap-3">
-            <img src={image} style={{width:"46px", height:"34px"}} />
+            <img src={author_img} style={{width:"50px", height:"50px", borderRadius:"50%"}} />
             <div className="authorANdPublishedDate">
               <h5 className="card-title">{authorName}</h5>
               <p>

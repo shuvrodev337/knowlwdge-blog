@@ -1,35 +1,39 @@
 [
     {
         "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-        "title": "React Roadmap for beginners",
-        "authorName": "Shuvro",
+        "title": "React roadmap for junior front-end developers",
+        "authorName": "Mr. Raju",
         "publishedDate": "March 5",
         "minuteRead": 20,
+        "author_img":"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwcGVvcGxlJTIwcG9ydGZvbGlvfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
         "img": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-        
+
     },
     {
         "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
-        "title": "Css shortcuts",
-        "authorName": "Dev",
+        "title": "Machine learning for beginners",
+        "authorName": "Mrs. Setara",
         "publishedDate": "Addidas",
-        "minuteRead": 10,        
+        "minuteRead": 10,
+        "author_img":"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHJhbmRvbSUyMHBlb3BsZSUyMGZhY2UlMjBjbG9zZSUyMHVwfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",        
         "img": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     },
     {
         "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
-        "title": "AI Tools and future",
-        "authorName": "Mondal",
+        "title": "AI Tools and future of Artificial Intelligence",
+        "authorName": "Mr. Mostofa",
         "publishedDate": "Addidas",
         "minuteRead": 8,
-        "img": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+        "author_img":"https://images.unsplash.com/photo-1542570106-c3d4aeb5c19c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHJhbmRvbSUyMHBlb3BsZSUyMGZhY2UlMjBjbG9zZSUyMHVwfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     },
     {
         "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
-        "title": "Python for beginners",
-        "authorName": "Shishir Das",
+        "title": "Python A-Z for beginners",
+        "authorName": "Jon Doe",
         "publishedDate": "Addidas",
         "minuteRead": 15,
+        "author_img":"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlJTIwZmFjZSUyMGNsb3NlJTIwdXB8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
         "img": "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2dyYW1taW5nJTIwcG5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     }
 ]
