@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 
-const Bookmarks = ({ readTime, bookmarks, clearSpentTime, clearBookmarks }) => {
+const Bookmarks = ({ readTime, bookmarks, clearBookmarksAndTime }) => {
   const [time, setTime] = useState(readTime);
   useEffect(() => {
     const existingTime = localStorage.getItem("read-time");  
     if (existingTime) {
-      
       setTime(existingTime);
+    }else{
+      setTime(0)
     }
     
     
@@ -37,7 +38,6 @@ const Bookmarks = ({ readTime, bookmarks, clearSpentTime, clearBookmarks }) => {
         </h4>
 
       </div>
-      <button onClick={clearSpentTime} className="btn btn-danger btn-sm w-50 mx-auto mb-4">Clear Spent Time</button>
       <h4 className="card-header">Bookmarked Blogs: {bookmarkedBlogs.length}</h4>
 
       <ul className="list-group list-group-flush pb-4">
@@ -45,7 +45,7 @@ const Bookmarks = ({ readTime, bookmarks, clearSpentTime, clearBookmarks }) => {
           <li className="list-group-item fw-bolder" key={bookmark.id}>{count++}. {bookmark.title}</li>
         ))}
       </ul>
-      <button onClick={clearBookmarks} className="btn btn-primary btn-sm w-50 mx-auto mt-4">Clear Bookmarks</button>
+      <button onClick={clearBookmarksAndTime} className="btn btn-primary btn-sm w-50 mx-auto mt-4">Clear All</button>
 
     </div>
   );

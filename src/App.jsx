@@ -12,7 +12,10 @@ function App() {
   const [readTime, setReadTime] = useState(0);
   const [bookmarks, setBookmarks] = useState([]);
 
+
   const handleReadTime = (minuteRead) => {
+
+   
     const previousReadTime = JSON.parse(localStorage.getItem("read-time"));
     if (previousReadTime) {
       const sum = previousReadTime + minuteRead;
@@ -27,13 +30,6 @@ function App() {
     });
   };
 
-  const clearSpentTime = ()=>{
-    localStorage.removeItem("read-time")
-    setReadTime(0)
-    toast.success("Spent time cleared Successfully !", {
-      position: toast.POSITION.TOP_CENTER
-    });
-  }
 
   const handleBookmarks = (id, title) => {
     let bookmark = {};
@@ -71,10 +67,14 @@ function App() {
 
     setBookmarks(newBookmarks);
   };
-  const clearBookmarks = ()=>{
+  const clearBookmarksAndTime = ()=>{
     localStorage.removeItem("bookmarked-blogs")
     setBookmarks([])
-    toast.success("Bookmarks cleared Successfully !", {
+
+        localStorage.removeItem("read-time")
+    setReadTime(0)
+
+    toast.success("Cleared Successfully !", {
       position: toast.POSITION.TOP_CENTER
     });
   }
@@ -90,8 +90,8 @@ function App() {
             handleBookmarks={handleBookmarks}
           ></Blogs>
         </div>
-        {/* <div className="bookmark-section col-md-4 card"> */}
-        <Bookmarks readTime={readTime} bookmarks={bookmarks} clearSpentTime={clearSpentTime} clearBookmarks={clearBookmarks}></Bookmarks>
+        {/* <div className="bookmark-section col-md-4 card">  clearSpentTime={clearSpentTime}*/}
+        <Bookmarks readTime={readTime} bookmarks={bookmarks}  clearBookmarksAndTime={clearBookmarksAndTime}></Bookmarks>
         {/* </div> */}
       </div>
       <ToastContainer></ToastContainer>
