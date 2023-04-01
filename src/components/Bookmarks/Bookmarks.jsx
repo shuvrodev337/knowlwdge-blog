@@ -4,11 +4,16 @@ import React, { useEffect, useState } from "react";
 const Bookmarks = ({ readTime, bookmarks, clearSpentTime, clearBookmarks }) => {
   const [time, setTime] = useState(readTime);
   useEffect(() => {
-    const existingTime = localStorage.getItem("read-time");
-    setTime(existingTime);
+    const existingTime = localStorage.getItem("read-time");  
+    if (existingTime) {
+      
+      setTime(existingTime);
+    }
+    
+    
+      
   }, [readTime]);
 
-  //arekta useeffect likhe tar dependency bookmarks diye dibo
   const [bookmarkedBlogs, setBookmarkedBlogs] = useState(bookmarks);
   useEffect(() => {
     const existingBookmarks = JSON.parse(
@@ -20,13 +25,15 @@ const Bookmarks = ({ readTime, bookmarks, clearSpentTime, clearBookmarks }) => {
         setBookmarkedBlogs([])
     }
   }, [bookmarks]);
+
   let count=1;
+  
 
   return (
     <div className="card col-md-4 text-center">
       <div className="pb-4 ">
         <h4 className="card-header pb-4">
-          Spent time on read: {time ? time : 0} min
+          Spent time on read: {time ? time : 0} min 
         </h4>
 
       </div>

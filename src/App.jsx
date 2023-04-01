@@ -6,6 +6,7 @@ import Bookmarks from "./components/Bookmarks/Bookmarks";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Blog from "./components/Blog/Blog";
 
 function App() {
   const [readTime, setReadTime] = useState(0);
@@ -94,6 +95,7 @@ function App() {
         {/* </div> */}
       </div>
       <ToastContainer></ToastContainer>
+      <Blog></Blog>
     </div>
   );
 }
