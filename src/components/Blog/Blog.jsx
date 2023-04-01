@@ -24,7 +24,7 @@ const Blog = () => {
             </div>
             <div className='border border-3 p-3 mb-2 rounded'>
             <h3>How Does React work?</h3>
-            <p> React JS is a JavaScript-based UI development library.It divides the UI into different reusable components. React maintains a virtual DOM and updates the only necessary parts/components of the UI promptly.React components work similarly to JavaScript functions. </p>
+            <p> React JS is a JavaScript-based UI development library.It divides the UI into different reusable components.React components work similarly to JavaScript functions. React maintains a virtual DOM and updates the only necessary parts/components of the UI promptly by using diff algorithm.</p>
             </div>
         </div>
     );
